@@ -9,7 +9,11 @@ import wcSwiper from 'wc-swiper'
 import axios from 'axios'
 
 // 加载样式
+import './assets/less/common.less'
 import './assets/less/base.less'
+import './assets/less/index.less'
+import './assets/less/home.less'
+import './assets/less/assembly.less'
 import 'wc-swiper/style.css'
 
 Vue.config.productionTip = false

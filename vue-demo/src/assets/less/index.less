@@ -1,0 +1,125 @@
+@import "common.less";
+
+.us-index {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 100vw;
+    border-bottom: 1px solid @border;
+    background-color: @white;
+    z-index: @z-index-1;
+    &.header-home {
+      background-color: @main;
+      color: @white;
+      border-bottom: none;
+      height: 5rem;
+    }
+    .header-module {
+      display: flex;
+      height: 2.5rem;
+      text-align: center;
+      align-items: stretch;
+      .icon {
+        .flex-center;
+        width: 2.5rem;
+        font-size: @xl-font;
+        position: relative;
+        .pointer;
+        &:first-child {
+          &::after {
+            content: '';
+            position: absolute;
+            top: .5rem;
+            right: 0;
+            height: 1.5rem;
+            width: 1px;
+            background-color: @border;
+          }
+        }
+      }
+      .title {
+        flex: 1;
+        font-size: @m-font;
+        line-height: 2.5rem;
+      }
+    }
+    .navigation {
+      width: 100vw;
+      height: 2.5rem;
+      overflow: hidden;
+      color: @white;
+      position: relative;
+      ul {
+        position: relative;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        li {
+          display: inline-block;
+          font-size: .85em;
+          &.hover {
+            a::after {
+              background: @white;
+            }
+          }
+          a {
+            position: relative;
+            display: block;
+            padding: 0 .5rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            color: @white;
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: .3rem;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 3.5rem;
+              height: 1px;
+              background: @main;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    &.content-home {
+      padding-top: 5rem;
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 3rem;
+    z-index: @z-index-1;
+    background: @white;
+    ul {
+      display: flex;
+      li {
+        flex: 1;
+        height: 3rem;
+        .flex-center;
+        flex-direction: column;
+        .pointer;
+        &.hover {
+          background-color: @main;
+          color: @white;
+        }
+        .iconfont {
+          font-size: @l-font;
+        }
+        .title {
+          font-size: @s-font;
+        }
+      }
+    }
+  }
+}

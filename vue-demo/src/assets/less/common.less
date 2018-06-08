@@ -1,0 +1,80 @@
+// 主体颜色
+@border: #efefef;
+@main: #fea509;
+@body-bg: #f6f6f6;
+@notice: #ff0000;
+
+// 文字凸显色调
+@d-color: #999;
+
+// 商品label-bg
+@degree-special: #fecf09;
+@degree-promo: @main;
+@degree-recommend: #10e235;
+@degree-hot: @notice;
+
+// 一般不变的色调
+@white: #fff;
+@black: #333;
+
+//z-index 层级
+@z-index-1: 100;
+@z-index-2: 200;
+@z-index-3: 300;
+@z-index-4: 400;
+@z-index-5: 500;
+
+// 字体大小规格
+@s-font: .8em;
+@sl-font: .9em;
+@ms-font: .95em;
+@m-font: 1em;
+@ml-font: 1.1em;
+@l-font: 1.2em;
+@xl-font: 1.3em;
+
+//共同样式
+.pointer {
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remarks {
+  color: @d-color;
+}
+
+// 单行超过隐藏
+.single-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.btn-bg {
+  background: -webkit-linear-gradient(@main, #f6d365);
+  background: -o-linear-gradient(@main, #f6d365);
+  background: -mos-linear-gradient(@main, #f6d365);
+  background: -moz-linear-gradient(@main, #f6d365);
+  background: linear-gradient(#fea509, #f6d365);
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  border-radius: .4rem;
+  &.btn-primary {
+    .btn-bg;
+    color: @white;
+  }
+  &.btn-s-size {
+    width: 4rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: @s-font;
+  }
+}

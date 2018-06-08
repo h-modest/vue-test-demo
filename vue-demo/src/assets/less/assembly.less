@@ -1,0 +1,62 @@
+@import "common.less";
+
+.show-item {
+  padding: .5rem;
+  background: @white;
+  .single-good {
+    display: flex;
+    align-items: center;
+    .good-icon {
+      width: 5rem;
+      height: 5rem;
+    }
+    .good-info {
+      flex: 1;
+      margin-left: .5rem;
+      overflow: hidden;
+      position: relative;
+      .title {
+        font-size: @ms-font;
+        .single-ellipsis;
+        .good-degree {
+          display: inline-block;
+          font-size: @s-font;
+          padding: .2rem .5rem;
+          color: @white;
+          border-radius: .2rem;
+          &.degree-special {
+            background-color: @degree-special;
+          }
+          &.degree-promo {
+            background-color: @degree-promo;
+          }
+          &.degree-recommend {
+            background-color: @degree-recommend;
+          }
+          &.degree-hot {
+            background-color: @degree-hot;
+          }
+        }
+      }
+      .remarks {
+        margin: .4rem 0;
+        font-size: @s-font;
+        .single-ellipsis;
+      }
+      .regular-price {
+        font-size: @s-font;
+        text-decoration: line-through;
+        margin: .3rem 0;
+      }
+      .member-price {
+        font-size: @ms-font;
+        color: @notice;
+      }
+      .btn-primary {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

@@ -9,6 +9,3 @@ export default {
   name: 'store'
 }
 </script>
-
-<style lang="scss">
-</style>
