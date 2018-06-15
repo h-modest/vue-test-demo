@@ -60,3 +60,31 @@
     }
   }
 }
+
+.index-title {
+  display: flex;
+  align-items: center;
+  padding: .8rem 0;
+  .g-line {
+    flex: 1;
+    &::after,
+    &::before {
+      content: '';
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      .btn-bg;
+      .btn-box-shadow;
+      transform: rotate(45deg);
+      margin: 0 .3rem;
+    }
+    &:first-child {
+      text-align: right;
+    }
+  }
+  .title {
+    width: 6rem;
+    font-size: @xl-font;
+    text-align: center;
+  }
+}
